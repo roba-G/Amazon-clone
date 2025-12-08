@@ -1,4 +1,3 @@
-import React from "react";
 import { FaSearch } from "react-icons/fa";
 import { SlLocationPin } from "react-icons/sl";
 import { BiCart } from "react-icons/bi";
