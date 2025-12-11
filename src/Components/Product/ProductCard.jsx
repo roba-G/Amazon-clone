@@ -2,24 +2,29 @@ import React from "react";
 import { Rating } from "@mui/material";
 import CurrencyFormat from "../CurrencyFormat/CurrencyFormat";
 import style from "./product.module.css";
+import { Link } from "react-router-dom";
 
-function ProductCard({ data }) {
-  const { image, title, id, rating, price } = data;
+function ProductCard({ data , flex, renderdesc}) {
+  const { image, title, id, rating, price, description } = data;
+  // console.log(description);
   return (
-    <div className={style.card_container}>
-      <a href="">
+    <div className={`${style.card_container} ${flex?style.product_flexed: ''}`}>
+      <Link to={`/products/${id}`}>
         <img src={image} alt="" />
-      </a>
+      </Link>
       <div>
         <h3>{title}</h3>
+        {
+          renderdesc && <div style={{ maxWidth: '750px' }}>{description}</div>
+        }
         <div className={style.rating}>
           <Rating
             name="half-rating"
-            defaultValue={rating.rate}
+            defaultValue={rating?.rate}
             precision={0.1}
           />
           {/* rating count */}
-          <small>{rating.count}</small>
+          <small>{rating?.count}</small>
         </div>
         <div>
           {/* price */}
