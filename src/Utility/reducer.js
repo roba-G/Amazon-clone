@@ -20,4 +20,4 @@ export const reducer = (state, action) => {
 
 }
 
-const [state, dispatch] = useReducer(reducer, initialState);
+// const [state, dispatch] = useReducer(reducer, initialState);
