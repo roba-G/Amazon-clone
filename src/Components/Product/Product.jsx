@@ -26,7 +26,8 @@ function Product() {
         isLoading ? (<Loader />) : (
         <div className={style.product_container}>
           {product?.map((singleProduct) => {
-            return <ProductCard data={singleProduct} key={singleProduct.id} />;
+            return <ProductCard data={singleProduct} key={singleProduct.id}
+            renderAdd={true}/>;
           })}
         </div>
         )

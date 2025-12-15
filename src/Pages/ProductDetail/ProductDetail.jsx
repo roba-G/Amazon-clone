@@ -28,7 +28,8 @@ function ProductDetail() {
   }, [productId]);
   return (
     <LayOut>
-          {isLoading ? <Loader /> : product && <ProductCard key={product.id} data={product} flex={true} renderdesc={true} />}
+      {isLoading ? <Loader /> : product && <ProductCard key={product.id} data={product} flex={true} renderdesc={true}
+      renderAdd={true}/>}
     </LayOut>
   );
 }
