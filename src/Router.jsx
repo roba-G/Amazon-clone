@@ -10,18 +10,18 @@ import ProductDetail from './Pages/ProductDetail/ProductDetail'
 
 function Routing() {
   return (
-    <Router>
-          <Routes>
-              <Route path='/' element={<Landing />} />
-              <Route path ='/auth' element = {<Signup />} />
-              <Route path ='/payment' element = {<Payment />} />
-        <Route path='/orders' element={<Orders />} />
-        <Route path='/category/:categoryName' element={<Results />} />
-        <Route path = '/products/:productId' element = {<ProductDetail />} />
-              <Route path ='/cart' element = {<Cart />} />
+    <Router basename="/Amazon-clone">
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/auth" element={<Signup />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/orders" element={<Orders />} />
+        <Route path="/category/:categoryName" element={<Results />} />
+        <Route path="/products/:productId" element={<ProductDetail />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </Router>
-  )
+  );
 }
 
 export default Routing
