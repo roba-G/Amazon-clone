@@ -14,6 +14,7 @@ function Product() {
       .get("https://fakestoreapi.com/products")
       .then((res) => {
         setProduct(res.data)
+        console.log(res.data);
         setIsLoading(false);
       }).catch((err) => {
         console.log(err); 
