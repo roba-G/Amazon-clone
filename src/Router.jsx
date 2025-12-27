@@ -20,7 +20,7 @@ const stripePromise = loadStripe(
 
 function Routing() {
   return (
-    <Router basename="/Amazon-clone">
+    <Router>
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/auth" element={<Auth />} />
@@ -41,7 +41,10 @@ function Routing() {
         <Route
           path="/orders"
           element={
-            <ProtectedRoute msg={"you must login to access your orders!"} redirect={"/orders"}>
+            <ProtectedRoute
+              msg={"you must login to access your orders!"}
+              redirect={"/orders"}
+            >
               <Orders />
             </ProtectedRoute>
           }
